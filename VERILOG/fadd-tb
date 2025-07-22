@@ -1,0 +1,22 @@
+module fadd_tb;
+   reg a,b,c_in;
+   wire s,c_out;
+fadd fadd_tb(
+   .a(a),
+   .b(b),
+   .c_in(c_in),
+   .s(s),
+   .c_out(c_out));
+initial begin
+  $monitor("time=%t,a=%b,b=%b,c_in=%b,s=%b,c_out=%b",$time,a,b,c_in,s,c_out);
+
+   a=0;b=0;c_in=0;#10;
+   a=0;b=0;c_in=1;#10;
+   a=0;b=1;c_in=0;#10;
+   a=0;b=1;c_in=1;#10;
+   a=1;b=0;c_in=0;#10;
+   a=1;b=0;c_in=1;#10;
+   a=1;b=1;c_in=0;#10;
+   a=1;b=1;c_in=1;#10;
+ end
+endmodule
