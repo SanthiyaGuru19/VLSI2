@@ -1,0 +1,9 @@
+ module fadd( input a,input b,input c_in,output s,output c_out);
+   wire w,x,y,z;
+   xor(w,a,b);
+   xor(s,w,c_in);
+   and(x,a,b);
+   and(y,b,c_in);
+   and(z,a,c_in);
+   or(c_out,x,y,z);
+ endmodule
