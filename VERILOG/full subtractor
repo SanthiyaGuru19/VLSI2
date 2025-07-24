@@ -1,0 +1,6 @@
+module fsub(
+   input a,b,c,
+   output d,B);
+  assign d = a^b^c;
+  assign B = ((~a)&b)|((a~^b)&c);
+endmodule
