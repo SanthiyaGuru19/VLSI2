@@ -1,0 +1,16 @@
+module hsub_tb;
+    reg a,b;
+    wire d,B;
+hsub h_tb(
+   .a(a),
+   .b(b),
+   .d(d),
+   .B(B));
+initial begin
+    $monitor("time=%0t,a=%b,b=%b,d=%b,B=%b",$time,a,b,d,B);
+      a=0;b=0;#10;
+      a=0;b=1;#10;
+      a=1;b=0;#10;
+      a=1;b=1;#10;
+    end
+endmodule
