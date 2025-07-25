@@ -1,6 +1,6 @@
-module hadd(
-   input a,b,
-   output s,c);
- assign s=a^b;
- assign c=a&b;
+module hsub(
+  input a,b,
+  output d,B);
+ assign d = a^b;
+ assign B=((~a)&b);
 endmodule
